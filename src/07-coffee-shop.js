@@ -31,5 +31,147 @@
  * @returns {number} Total price or -1 for invalid input
  */
 export function calculateCoffeePrice(size, type, extras = {}) {
-  // Your code here
+
+  if (size !== "small" && size !== "medium" && size !== "large") return -1;
+  if (type !== "regular" && type !== "latte" && type !== "cappuccino" && type !== "mocha") return -1;
+
+  let totalPrice;
+
+  if (size === "small") {
+    switch (type) {
+      case "regular":
+        totalPrice = 3.00 + 0.00;
+        if (extras.whippedCream) {
+          totalPrice += 0.50;
+        }
+        if (extras.extraShot) {
+          totalPrice += 0.75
+        }
+        const result = parseFloat(totalPrice.toFixed(2));
+        return result;
+
+      case "latte":
+        totalPrice = 3.00 + 1.00;
+        if (extras.whippedCream) {
+          totalPrice += 0.50;
+        }
+        if (extras.extraShot) {
+          totalPrice += 0.75
+        }
+        return parseFloat(totalPrice.toFixed(2));
+
+      case "cappuccino":
+        totalPrice = 3.00 + 1.50;
+        if (extras.whippedCream) {
+          totalPrice += 0.50;
+        }
+        if (extras.extraShot) {
+          totalPrice += 0.75
+        }
+        return parseFloat(totalPrice.toFixed(2));
+
+      case "mocha":
+        totalPrice = 3.00 + 2.00;
+        if (extras.whippedCream) {
+          totalPrice += 0.50;
+        }
+        if (extras.extraShot) {
+          totalPrice += 0.75
+        }
+        return parseFloat(totalPrice.toFixed(2));
+
+    }
+  }
+
+  if (size === "medium") {
+    switch (type) {
+      case "regular":
+        totalPrice = 4.00 + 0.00;
+        if (extras.whippedCream) {
+          totalPrice += 0.50;
+        }
+        if (extras.extraShot) {
+          totalPrice += 0.75
+        }
+        const result = parseFloat(totalPrice.toFixed(2));
+        return result;
+
+      case "latte":
+        totalPrice = 4.00 + 1.00;
+        if (extras.whippedCream) {
+          totalPrice += 0.50;
+        }
+        if (extras.extraShot) {
+          totalPrice += 0.75
+        }
+        return parseFloat(totalPrice.toFixed(2));
+
+      case "cappuccino":
+        totalPrice = 4.00 + 1.50;
+        if (extras.whippedCream) {
+          totalPrice += 0.50;
+        }
+        if (extras.extraShot) {
+          totalPrice += 0.75
+        }
+        return parseFloat(totalPrice.toFixed(2));
+
+      case "mocha":
+        totalPrice = 4.00 + 2.00;
+        if (extras.whippedCream) {
+          totalPrice += 0.50;
+        }
+        if (extras.extraShot) {
+          totalPrice += 0.75
+        }
+        return parseFloat(totalPrice.toFixed(2));
+
+    }
+  }
+
+  if (size === "large") {
+    switch (type) {
+      case "regular":
+        totalPrice = 5.00 + 0.00;
+        if (extras.whippedCream) {
+          totalPrice += 0.50;
+        }
+        if (extras.extraShot) {
+          totalPrice += 0.75
+        }
+        const result = parseFloat(totalPrice.toFixed(2));
+        return result;
+
+      case "latte":
+        totalPrice = 5.00 + 1.00;
+        if (extras.whippedCream) {
+          totalPrice += 0.50;
+        }
+        if (extras.extraShot) {
+          totalPrice += 0.75
+        }
+        return parseFloat(totalPrice.toFixed(2));
+
+      case "cappuccino":
+        totalPrice = 5.00 + 1.50;
+        if (extras.whippedCream) {
+          totalPrice += 0.50;
+        }
+        if (extras.extraShot) {
+          totalPrice += 0.75
+        }
+        return parseFloat(totalPrice.toFixed(2));
+
+      case "mocha":
+        totalPrice = 5.00 + 2.00;
+        if (extras.whippedCream) {
+          totalPrice += 0.50;
+        }
+        if (extras.extraShot) {
+          totalPrice += 0.75
+        }
+        return parseFloat(totalPrice.toFixed(2));
+    }
+  }
+
 }
