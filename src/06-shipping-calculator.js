@@ -68,6 +68,4 @@ export function calculateShipping(weight, country, orderTotal) {
       return shippingCost;
     }
   }
-
-
 }
